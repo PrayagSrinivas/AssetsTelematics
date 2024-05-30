@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomTextField: View{
+struct CustomTextField: View {
     
     @State var value = ""
     @State var title = ""
@@ -16,9 +16,9 @@ struct CustomTextField: View{
     var dropDownItem: [MenuTitle] = []
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             Text(title)
-                .foregroundStyle(.black)
+                .foregroundColor(.black)
                 .font(Font.custom("OpenSans-Semibold", size: 14))
                 .padding(.leading, 20)
             
@@ -29,19 +29,21 @@ struct CustomTextField: View{
     
     private var menuView: some View {
         Menu {
-            ForEach(dropDownItem, id: \.id){ item in
+            ForEach(dropDownItem, id: \.id) { item in
                 Button(item.title) {
                     self.value = item.title
                 }
             }
-        } label: { menuDropDownButton }
+        } label: {
+            menuDropDownButton
+        }
     }
     
     private var menuDropDownButton: some View {
-        VStack(spacing: 5){
+        VStack(spacing: 5) {
             Image(systemName: "chevron.down")
                 .resizable()
-                .foregroundStyle(.gray)
+                .foregroundColor(.gray)
                 .frame(width: 18, height: 10)
         }
     }
@@ -62,7 +64,6 @@ struct CustomTextField: View{
                 menuButton
             }
         }
-        
     }
     
     @ViewBuilder
@@ -77,24 +78,24 @@ struct CustomTextField: View{
             .frame(width: 36, height: 36)
             .padding(4.5)
             .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
-            .background(.white)
+            .background(Color.white)
     }
     
     private var commonTextField: some View {
-    TextField("", text: $value)
-                .textFieldStyle(.plain)
-                .frame(height: 45)
-                .padding(.horizontal, 10)
-                .placeholder(when: value.isEmpty) {
-                    Text(dropDownItem.isEmpty ? title : "Select \(title)")
-                        .font(Font.custom("OpenSans-Semibold", size: 13))
-                        .padding(.horizontal, 10)
-                        .foregroundColor(.gray)
-                }
-                .background(.white)
-                .cornerRadius(4.0)
-                .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
-                .disabled(style == .menu || style == .qrCode)
+        TextField("", text: $value)
+            .textFieldStyle(.plain)
+            .frame(height: 45)
+            .padding(.horizontal, 10)
+            .placeholder(when: value.isEmpty) {
+                Text(dropDownItem.isEmpty ? title : "Select \(title)")
+                    .font(Font.custom("OpenSans-Semibold", size: 13))
+                    .padding(.horizontal, 10)
+                    .foregroundColor(.gray)
+            }
+            .background(Color.white)
+            .cornerRadius(4.0)
+            .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
+            .disabled(style == .qrCode || !dropDownItem.isEmpty )
     }
 }
 
@@ -103,4 +104,3 @@ enum CustomTextFieldStyle {
     case simple
     case menu
 }
-
