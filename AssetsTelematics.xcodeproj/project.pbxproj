@@ -19,6 +19,8 @@
 		ACEB72BB2C0826530033CB1C /* openRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEB72B82C0826520033CB1C /* openRegular.ttf */; };
 		ACEB72BD2C08314A0033CB1C /* AddVehilceInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72BC2C08314A0033CB1C /* AddVehilceInfoViewModel.swift */; };
 		ACEB72C02C08320F0033CB1C /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72BF2C08320F0033CB1C /* VehicleService.swift */; };
+		ACEB72CA2C0848650033CB1C /* MenuTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72C92C0848650033CB1C /* MenuTitle.swift */; };
+		ACEB72CC2C0848840033CB1C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72CB2C0848840033CB1C /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		ACEB72B82C0826520033CB1C /* openRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = openRegular.ttf; sourceTree = "<group>"; };
 		ACEB72BC2C08314A0033CB1C /* AddVehilceInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehilceInfoViewModel.swift; sourceTree = "<group>"; };
 		ACEB72BF2C08320F0033CB1C /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
+		ACEB72C92C0848650033CB1C /* MenuTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTitle.swift; sourceTree = "<group>"; };
+		ACEB72CB2C0848840033CB1C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDE20EA2C06ED160098DF53 /* VehicleData.swift */,
+				ACEB72C92C0848650033CB1C /* MenuTitle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDE20E82C06ECD40098DF53 /* CustomTextField.swift */,
+				ACEB72CB2C0848840033CB1C /* View+Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -237,11 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACEB72C02C08320F0033CB1C /* VehicleService.swift in Sources */,
+				ACEB72CA2C0848650033CB1C /* MenuTitle.swift in Sources */,
 				ACDE20E92C06ECD40098DF53 /* CustomTextField.swift in Sources */,
 				ACEB72BD2C08314A0033CB1C /* AddVehilceInfoViewModel.swift in Sources */,
 				ACDE20EB2C06ED160098DF53 /* VehicleData.swift in Sources */,
 				ACDE20E72C06ECAB0098DF53 /* AddVehicleInfoView.swift in Sources */,
 				ACDE20DB2C064C150098DF53 /* HomeView.swift in Sources */,
+				ACEB72CC2C0848840033CB1C /* View+Extension.swift in Sources */,
 				ACDE20D92C064C150098DF53 /* AssetsTelematicsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

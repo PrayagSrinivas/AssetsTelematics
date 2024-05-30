@@ -21,9 +21,9 @@ struct CustomTextField: View{
                 .foregroundStyle(.black)
                 .font(Font.custom("OpenSans-Semibold", size: 14))
                 .padding(.leading, 20)
-
-                textField
-            .padding(.horizontal)
+            
+            textField
+                .padding(.horizontal)
         }
     }
     
@@ -67,10 +67,8 @@ struct CustomTextField: View{
     
     @ViewBuilder
     private var menuButton: some View {
-        if style == .menu {
-            menuView
-                .padding(.trailing, 10)
-        }
+        menuView
+            .padding(.trailing, 10)
     }
     
     private var qrCodeButton: some View {
@@ -96,29 +94,7 @@ struct CustomTextField: View{
                 .background(.white)
                 .cornerRadius(4.0)
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
-                .disabled(!dropDownItem.isEmpty)
-    }
-}
-
-extension View {
-    func placeholder<Content: View>(
-        when shouldShow: Bool,
-        alignment: Alignment = .leading,
-        @ViewBuilder placeholder: () -> Content) -> some View {
-
-        ZStack(alignment: alignment) {
-            placeholder().opacity(shouldShow ? 1 : 0)
-            self
-        }
-    }
-}
-
-struct MenuTitle: Identifiable {
-    let title: String
-    let id: UUID = UUID()
-    
-    init(title: String) {
-        self.title = title
+                .disabled(style == .menu || style == .qrCode)
     }
 }
 
