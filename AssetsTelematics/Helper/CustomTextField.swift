@@ -13,6 +13,7 @@ struct CustomTextField: View {
     @State var title = ""
     @State var style: CustomTextFieldStyle = .simple
     
+    var onScan:(() -> Void)?
     var dropDownItem: [MenuTitle] = []
     
     var body: some View {
@@ -73,12 +74,17 @@ struct CustomTextField: View {
     }
     
     private var qrCodeButton: some View {
-        Image(systemName: "qrcode")
-            .resizable()
-            .frame(width: 36, height: 36)
-            .padding(4.5)
-            .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
-            .background(Color.white)
+        Button {
+            onScan?()
+        } label: {
+            Image(systemName: "qrcode")
+                .resizable()
+                .frame(width: 36, height: 36)
+                .padding(4.5)
+                .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
+                .background(Color.white)
+                .foregroundStyle(.black)
+        }
     }
     
     private var commonTextField: some View {

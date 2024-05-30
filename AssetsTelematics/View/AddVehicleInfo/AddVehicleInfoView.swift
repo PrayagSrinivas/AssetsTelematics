@@ -5,18 +5,22 @@
 //  Created by Srinivas Prayag Sahu on 29/05/24.
 //
 
+import CodeScanner
 import SwiftUI
 
 struct AddVehicleInfoView: View {
     @Binding var isSecondaryScreenPresented: Bool
     @StateObject private var viewModel = AddVehicleInfoViewModel()
+    @State var isScannerPresented: Bool = false
 
     var body: some View {
         VStack(spacing: 20) {
             navBar
             ScrollView {
                 VStack (spacing: 8) {
-                    CustomTextField(title: "Select Imei", style: .qrCode, dropDownItem: [])
+                    CustomTextField(title: "Select Imei", style: .qrCode, onScan: {
+                        isScannerPresented = true
+                    }, dropDownItem: [])
                     CustomTextField(title: "Tag Name", style: .simple)
                     CustomTextField(title: "Registration Number", style: .simple)
                     CustomTextField(title: "Vehicle type", style: .menu,dropDownItem: viewModel.makeVehicleTypeData())
@@ -35,6 +39,16 @@ struct AddVehicleInfoView: View {
         .onAppear {
             viewModel.fetchVehicleData()
         }
+        .sheet(isPresented: $isScannerPresented, content: {
+            CodeScannerView(codeTypes: [.qr]) { result in
+                switch result {
+                case .success(let success):
+                    print(success)
+                case .failure(let failure):
+                    print(failure.localizedDescription)
+                }
+            }
+        })
     }
 
     private var navBar: some View {
