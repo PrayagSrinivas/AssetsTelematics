@@ -8,17 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		ACDE20D92C064C150098DF53 /* AssetsTelematicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20D82C064C150098DF53 /* AssetsTelematicsApp.swift */; };
-		ACDE20DB2C064C150098DF53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20DA2C064C150098DF53 /* ContentView.swift */; };
+		ACDE20DB2C064C150098DF53 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20DA2C064C150098DF53 /* HomeView.swift */; };
 		ACDE20DD2C064C160098DF53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDE20DC2C064C160098DF53 /* Assets.xcassets */; };
 		ACDE20E02C064C160098DF53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDE20DF2C064C160098DF53 /* Preview Assets.xcassets */; };
+		ACDE20E72C06ECAB0098DF53 /* AddVehicleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20E62C06ECAB0098DF53 /* AddVehicleInfoView.swift */; };
+		ACDE20E92C06ECD40098DF53 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20E82C06ECD40098DF53 /* CustomTextField.swift */; };
+		ACDE20EB2C06ED160098DF53 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20EA2C06ED160098DF53 /* VehicleData.swift */; };
+		ACEB72B92C0826520033CB1C /* openBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEB72B62C0826520033CB1C /* openBold.ttf */; };
+		ACEB72BA2C0826520033CB1C /* openSemibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEB72B72C0826520033CB1C /* openSemibold.ttf */; };
+		ACEB72BB2C0826530033CB1C /* openRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEB72B82C0826520033CB1C /* openRegular.ttf */; };
+		ACEB72BD2C08314A0033CB1C /* AddVehilceInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72BC2C08314A0033CB1C /* AddVehilceInfoViewModel.swift */; };
+		ACEB72C02C08320F0033CB1C /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72BF2C08320F0033CB1C /* VehicleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACDE20D52C064C150098DF53 /* AssetsTelematics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetsTelematics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE20D82C064C150098DF53 /* AssetsTelematicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTelematicsApp.swift; sourceTree = "<group>"; };
-		ACDE20DA2C064C150098DF53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACDE20DA2C064C150098DF53 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		ACDE20DC2C064C160098DF53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACDE20DF2C064C160098DF53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACDE20E62C06ECAB0098DF53 /* AddVehicleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleInfoView.swift; sourceTree = "<group>"; };
+		ACDE20E82C06ECD40098DF53 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		ACDE20EA2C06ED160098DF53 /* VehicleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
+		ACEB72B62C0826520033CB1C /* openBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = openBold.ttf; sourceTree = "<group>"; };
+		ACEB72B72C0826520033CB1C /* openSemibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = openSemibold.ttf; sourceTree = "<group>"; };
+		ACEB72B82C0826520033CB1C /* openRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = openRegular.ttf; sourceTree = "<group>"; };
+		ACEB72BC2C08314A0033CB1C /* AddVehilceInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehilceInfoViewModel.swift; sourceTree = "<group>"; };
+		ACEB72BF2C08320F0033CB1C /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +68,13 @@
 			isa = PBXGroup;
 			children = (
 				ACDE20D82C064C150098DF53 /* AssetsTelematicsApp.swift */,
-				ACDE20DA2C064C150098DF53 /* ContentView.swift */,
-				ACDE20DC2C064C160098DF53 /* Assets.xcassets */,
+				ACEB72B22C081CDB0033CB1C /* Fonts */,
+				ACEB72B32C081CE10033CB1C /* Resource */,
+				ACDE20F02C06ED580098DF53 /* Helper */,
+				ACDE20EC2C06ED280098DF53 /* Model */,
+				ACDE20ED2C06ED340098DF53 /* View */,
+				ACEB72BE2C0831970033CB1C /* ViewModel */,
+				ACEB72C12C0832890033CB1C /* Service */,
 				ACDE20DE2C064C160098DF53 /* Preview Content */,
 			);
 			path = AssetsTelematics;
@@ -65,6 +86,81 @@
 				ACDE20DF2C064C160098DF53 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACDE20EC2C06ED280098DF53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE20EA2C06ED160098DF53 /* VehicleData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACDE20ED2C06ED340098DF53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE20EE2C06ED430098DF53 /* Home */,
+				ACDE20EF2C06ED4A0098DF53 /* AddVehicleInfo */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACDE20EE2C06ED430098DF53 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE20DA2C064C150098DF53 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ACDE20EF2C06ED4A0098DF53 /* AddVehicleInfo */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE20E62C06ECAB0098DF53 /* AddVehicleInfoView.swift */,
+			);
+			path = AddVehicleInfo;
+			sourceTree = "<group>";
+		};
+		ACDE20F02C06ED580098DF53 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE20E82C06ECD40098DF53 /* CustomTextField.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		ACEB72B22C081CDB0033CB1C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB72B62C0826520033CB1C /* openBold.ttf */,
+				ACEB72B82C0826520033CB1C /* openRegular.ttf */,
+				ACEB72B72C0826520033CB1C /* openSemibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ACEB72B32C081CE10033CB1C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE20DC2C064C160098DF53 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ACEB72BE2C0831970033CB1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB72BC2C08314A0033CB1C /* AddVehilceInfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACEB72C12C0832890033CB1C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB72BF2C08320F0033CB1C /* VehicleService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +221,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEB72BB2C0826530033CB1C /* openRegular.ttf in Resources */,
 				ACDE20E02C064C160098DF53 /* Preview Assets.xcassets in Resources */,
+				ACEB72BA2C0826520033CB1C /* openSemibold.ttf in Resources */,
+				ACEB72B92C0826520033CB1C /* openBold.ttf in Resources */,
 				ACDE20DD2C064C160098DF53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACDE20DB2C064C150098DF53 /* ContentView.swift in Sources */,
+				ACEB72C02C08320F0033CB1C /* VehicleService.swift in Sources */,
+				ACDE20E92C06ECD40098DF53 /* CustomTextField.swift in Sources */,
+				ACEB72BD2C08314A0033CB1C /* AddVehilceInfoViewModel.swift in Sources */,
+				ACDE20EB2C06ED160098DF53 /* VehicleData.swift in Sources */,
+				ACDE20E72C06ECAB0098DF53 /* AddVehicleInfoView.swift in Sources */,
+				ACDE20DB2C064C150098DF53 /* HomeView.swift in Sources */,
 				ACDE20D92C064C150098DF53 /* AssetsTelematicsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +379,8 @@
 				DEVELOPMENT_TEAM = L56S6JLUSP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AssetsTelematics/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +410,8 @@
 				DEVELOPMENT_TEAM = L56S6JLUSP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AssetsTelematics/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
