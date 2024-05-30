@@ -21,6 +21,7 @@
 		ACEB72C02C08320F0033CB1C /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72BF2C08320F0033CB1C /* VehicleService.swift */; };
 		ACEB72CA2C0848650033CB1C /* MenuTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72C92C0848650033CB1C /* MenuTitle.swift */; };
 		ACEB72CC2C0848840033CB1C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB72CB2C0848840033CB1C /* View+Extension.swift */; };
+		ACEB72CF2C084A900033CB1C /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = ACEB72CE2C084A900033CB1C /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEB72CF2C084A900033CB1C /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +187,9 @@
 			dependencies = (
 			);
 			name = AssetsTelematics;
+			packageProductDependencies = (
+				ACEB72CE2C084A900033CB1C /* CodeScanner */,
+			);
 			productName = AssetsTelematics;
 			productReference = ACDE20D52C064C150098DF53 /* AssetsTelematics.app */;
 			productType = "com.apple.product-type.application";
@@ -213,6 +218,9 @@
 				Base,
 			);
 			mainGroup = ACDE20CC2C064C150098DF53;
+			packageReferences = (
+				ACEB72CD2C084A900033CB1C /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = ACDE20D62C064C150098DF53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -389,6 +397,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssetsTelematics/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We want to use camera for scan QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,6 +429,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssetsTelematics/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We want to use camera for scan QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,6 +470,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACEB72CD2C084A900033CB1C /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACEB72CE2C084A900033CB1C /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACEB72CD2C084A900033CB1C /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACDE20CD2C064C150098DF53 /* Project object */;
 }
