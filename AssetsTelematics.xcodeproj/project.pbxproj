@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC81AEC92C1845730033897E /* CustomRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81AEC82C1845730033897E /* CustomRadioButton.swift */; };
+		AC81AECB2C1847280033897E /* VehilceRadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81AECA2C1847280033897E /* VehilceRadioButtonView.swift */; };
 		ACDE20D92C064C150098DF53 /* AssetsTelematicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20D82C064C150098DF53 /* AssetsTelematicsApp.swift */; };
 		ACDE20DB2C064C150098DF53 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE20DA2C064C150098DF53 /* HomeView.swift */; };
 		ACDE20DD2C064C160098DF53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDE20DC2C064C160098DF53 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC81AEC82C1845730033897E /* CustomRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioButton.swift; sourceTree = "<group>"; };
+		AC81AECA2C1847280033897E /* VehilceRadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehilceRadioButtonView.swift; sourceTree = "<group>"; };
 		ACDE20D52C064C150098DF53 /* AssetsTelematics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetsTelematics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE20D82C064C150098DF53 /* AssetsTelematicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTelematicsApp.swift; sourceTree = "<group>"; };
 		ACDE20DA2C064C150098DF53 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				ACDE20EE2C06ED430098DF53 /* Home */,
 				ACDE20EF2C06ED4A0098DF53 /* AddVehicleInfo */,
+				AC81AECA2C1847280033897E /* VehilceRadioButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				ACDE20E82C06ECD40098DF53 /* CustomTextField.swift */,
 				ACEB72CB2C0848840033CB1C /* View+Extension.swift */,
+				AC81AEC82C1845730033897E /* CustomRadioButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -250,12 +256,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC81AEC92C1845730033897E /* CustomRadioButton.swift in Sources */,
 				ACEB72C02C08320F0033CB1C /* VehicleService.swift in Sources */,
 				ACEB72CA2C0848650033CB1C /* MenuTitle.swift in Sources */,
 				ACDE20E92C06ECD40098DF53 /* CustomTextField.swift in Sources */,
 				ACEB72BD2C08314A0033CB1C /* AddVehilceInfoViewModel.swift in Sources */,
 				ACDE20EB2C06ED160098DF53 /* VehicleData.swift in Sources */,
 				ACDE20E72C06ECAB0098DF53 /* AddVehicleInfoView.swift in Sources */,
+				AC81AECB2C1847280033897E /* VehilceRadioButtonView.swift in Sources */,
 				ACDE20DB2C064C150098DF53 /* HomeView.swift in Sources */,
 				ACEB72CC2C0848840033CB1C /* View+Extension.swift in Sources */,
 				ACDE20D92C064C150098DF53 /* AssetsTelematicsApp.swift in Sources */,
@@ -317,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -374,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
