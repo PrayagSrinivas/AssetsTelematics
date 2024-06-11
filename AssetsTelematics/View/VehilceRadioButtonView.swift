@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct VehicleRadioButtons: View {
+    
+    // Call back properties for radio button action
     let callback: (String) -> ()
     
     @State var selectedId: Vehicle = .own
     
+    // MARK: Primary View and UI Components.
     var body: some View {
         HStack(spacing: 20) {
             radioOwn
@@ -20,7 +23,7 @@ struct VehicleRadioButtons: View {
         }
     }
     
-    var radioOwn: some View {
+    private var radioOwn: some View {
         RadioButtonField(
             id: Vehicle.own.rawValue,
             label: Vehicle.own.rawValue,
@@ -29,7 +32,7 @@ struct VehicleRadioButtons: View {
         )
     }
     
-    var radioTransporter: some View {
+    private var radioTransporter: some View {
         RadioButtonField(
             id: Vehicle.transporter.rawValue,
             label: Vehicle.transporter.rawValue,
@@ -38,7 +41,7 @@ struct VehicleRadioButtons: View {
         )
     }
     
-    func radioGroupCallback(id: String) {
+    private func radioGroupCallback(id: String) {
         selectedId = Vehicle(rawValue: id)!
         callback(id)
     }

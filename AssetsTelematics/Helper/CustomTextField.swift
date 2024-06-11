@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomTextField: View {
     
+    // MARK: Properties
     @State var value = ""
     @State var title = ""
     @State var style: CustomTextFieldStyle = .simple
@@ -17,6 +18,7 @@ struct CustomTextField: View {
     var onScan:(() -> Void)?
     var dropDownItem: [MenuTitle] = []
     
+    // MARK: Initalizers
     init(value: String = "",
          title: String = "",
          style: CustomTextFieldStyle,
@@ -96,14 +98,18 @@ struct CustomTextField: View {
         Button {
             onScan?()
         } label: {
-            Image(systemName: "qrcode")
-                .resizable()
-                .frame(width: 36, height: 36)
-                .padding(4.5)
-                .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
-                .background(Color.white)
-                .foregroundStyle(.black)
+            qrCodeImage
         }
+    }
+    
+    private var qrCodeImage: some View {
+        Image(systemName: "qrcode")
+            .resizable()
+            .frame(width: 36, height: 36)
+            .padding(4.5)
+            .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color.gray, lineWidth: 1.5))
+            .background(Color.white)
+            .foregroundStyle(.black)
     }
     
     private var commonTextField: some View {
