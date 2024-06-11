@@ -23,7 +23,7 @@ struct VehicleRadioButtons: View {
     var radioOwn: some View {
         RadioButtonField(
             id: Vehicle.own.rawValue,
-            label: Vehicle.transporter.rawValue,
+            label: Vehicle.own.rawValue,
             isMarked: selectedId.rawValue == Vehicle.own.rawValue ? true : false,
             callback: radioGroupCallback
         )
