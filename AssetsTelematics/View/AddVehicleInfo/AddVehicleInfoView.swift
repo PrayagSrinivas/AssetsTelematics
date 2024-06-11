@@ -77,50 +77,53 @@ struct AddVehicleInfoView: View {
     
     @ViewBuilder
     private var formFiledGroup: some View {
-            CustomTextField(
-                title: "Select Imei",
-                style: .qrCode,
-                qrCodeScannedValue: $viewModel.qrCodeScannedValue,
-                onScan: { viewModel.isScannerPresented = true },
-                dropDownItem: [])
-            CustomTextField(
-                title: "Tag Name",
-                style: .simple
-            )
-            CustomTextField(
-                title: "Registration Number",
-                style: .simple
-            )
-            CustomTextField(
-                title: "Vehicle type",
-                style: .menu,
-                dropDownItem: viewModel.makeVehicleTypeData()
-            )
-            CustomTextField(
-                title: "Make",
-                style: .menu,
-                dropDownItem: viewModel.makeVehicleMake()
-            )
-            CustomTextField(
-                title: "Year of Manufacture",
-                style: .menu,
-                dropDownItem: viewModel.makeVehicleYearOfManufacture()
-            )
-            CustomTextField(
-                title: "Fuel Type",
-                style: .menu,
-                dropDownItem: viewModel.makeVehicleFuelType()
-            )
-            CustomTextField(
-                title: "Capacity",
-                style: .menu,
-                dropDownItem: viewModel.makeVehicleCapacity()
-            )
-            CustomTextField(
-                title: "Driver",
-                style: .simple,
-                qrCodeScannedValue: .constant("")
-            )
+        CustomTextField(
+            title: "Select Imei",
+            style: .qrCode,
+            qrCodeScannedValue: $viewModel.qrCodeScannedValue,
+            onScan: { viewModel.isScannerPresented = true },
+            dropDownItem: [])
+        CustomTextField(
+            title: "Tag Name",
+            style: .simple
+        )
+        CustomTextField(
+            title: "Registration Number",
+            style: .simple
+        )
+        CustomTextField(
+            title: "Vehicle type",
+            style: .menu,
+            dropDownItem: viewModel.makeVehicleTypeData()
+        )
+        CustomTextField(
+            title: "Make",
+            style: .menu,
+            dropDownItem: viewModel.makeVehicleMake()
+        )
+        CustomTextField(
+            title: "Year of Manufacture",
+            style: .menu,
+            dropDownItem: viewModel.makeVehicleYearOfManufacture()
+        )
+        CustomTextField(
+            title: "Fuel Type",
+            style: .menu,
+            dropDownItem: viewModel.makeVehicleFuelType()
+        )
+        CustomTextField(
+            title: "Capacity",
+            style: .menu,
+            dropDownItem: viewModel.makeVehicleCapacity()
+        )
+        CustomTextField(
+            title: "Ownership",
+            style: .radio
+        )
+        CustomTextField(
+            title: "Driver",
+            style: .simple
+        )
     }
     
     private var navBarLabel: some View {
@@ -140,3 +143,4 @@ struct AddVehicleInfoView: View {
         .padding(.leading, 10)
     }
 }
+

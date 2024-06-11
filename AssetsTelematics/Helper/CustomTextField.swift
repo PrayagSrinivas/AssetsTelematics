@@ -79,6 +79,10 @@ struct CustomTextField: View {
                 commonTextField
                 menuButton
             }
+        case .radio:
+            VehicleRadioButtons { selected in
+                print("Selected Owner is: \(selected)")
+            }
         }
     }
     
@@ -124,4 +128,5 @@ enum CustomTextFieldStyle {
     case qrCode
     case simple
     case menu
+    case radio
 }
