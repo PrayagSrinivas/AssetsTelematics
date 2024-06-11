@@ -17,6 +17,20 @@ struct CustomTextField: View {
     var onScan:(() -> Void)?
     var dropDownItem: [MenuTitle] = []
     
+    init(value: String = "",
+         title: String = "",
+         style: CustomTextFieldStyle,
+         qrCodeScannedValue: Binding<String> = .constant(""),
+         onScan: (() -> Void)? = nil,
+         dropDownItem: [MenuTitle] = []) {
+        self.value = value
+        self.title = title
+        self.style = style
+        self._qrCodeScannedValue = qrCodeScannedValue
+        self.onScan = onScan
+        self.dropDownItem = dropDownItem
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)

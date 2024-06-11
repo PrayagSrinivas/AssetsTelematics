@@ -85,42 +85,35 @@ struct AddVehicleInfoView: View {
                 dropDownItem: [])
             CustomTextField(
                 title: "Tag Name",
-                style: .simple,
-                qrCodeScannedValue: .constant("")
+                style: .simple
             )
             CustomTextField(
                 title: "Registration Number",
-                style: .simple,
-                qrCodeScannedValue: .constant("")
+                style: .simple
             )
             CustomTextField(
                 title: "Vehicle type",
                 style: .menu,
-                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleTypeData()
             )
             CustomTextField(
                 title: "Make",
                 style: .menu,
-                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleMake()
             )
             CustomTextField(
                 title: "Year of Manufacture",
                 style: .menu,
-                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleYearOfManufacture()
             )
             CustomTextField(
                 title: "Fuel Type",
                 style: .menu,
-                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleFuelType()
             )
             CustomTextField(
                 title: "Capacity",
                 style: .menu,
-                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleCapacity()
             )
             CustomTextField(
