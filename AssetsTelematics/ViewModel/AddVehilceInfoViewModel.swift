@@ -12,6 +12,7 @@ class AddVehicleInfoViewModel: ObservableObject {
     
     @Published var vehicleData: VehicleData = .init()
     @Published var textFieldValue: String = ""
+    @Published var isScannerPresented: Bool = false
 
     private let vehicleService: VehicleService
 

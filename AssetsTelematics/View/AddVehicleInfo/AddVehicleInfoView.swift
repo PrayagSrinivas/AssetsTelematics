@@ -14,9 +14,9 @@ struct AddVehicleInfoView: View {
     @StateObject private var viewModel = AddVehicleInfoViewModel()
     @Binding var isSecondaryScreenPresented: Bool
     
-    @State var isScannerPresented: Bool = false
     @State var qrCodeScannedValue: String = ""
-    
+
+        
     // MARK: Primary View and UI Components.
     var body: some View {
         VStack(spacing: 20) {
@@ -30,11 +30,12 @@ struct AddVehicleInfoView: View {
         .onAppear {
             viewModel.fetchVehicleData()
         }
-        .sheet(isPresented: $isScannerPresented, content: {
+        .sheet(isPresented: $viewModel.isScannerPresented, content: {
             CodeScannerView(codeTypes: [.qr]) { result in
                 switch result {
                 case .success(let value):
                     qrCodeScannedValue = value.string
+                    viewModel.isScannerPresented = false
                 case .failure(let failure):
                     print(failure.localizedDescription)
                 }
@@ -45,7 +46,9 @@ struct AddVehicleInfoView: View {
     private var scrollableContent: some View {
         ScrollView {
             VStack (spacing: 8) {
-                formFiledGroup
+                Group {
+                    formFiledGroup
+                }
             }
         }
     }
@@ -74,52 +77,59 @@ struct AddVehicleInfoView: View {
         .padding()
     }
     
+    @ViewBuilder
     private var formFiledGroup: some View {
-        Group {
             CustomTextField(
-                value: qrCodeScannedValue,
                 title: "Select Imei",
                 style: .qrCode,
-                onScan: { isScannerPresented = true },
+                qrCodeScannedValue: $qrCodeScannedValue,
+                onScan: { viewModel.isScannerPresented = true },
                 dropDownItem: [])
             CustomTextField(
                 title: "Tag Name",
-                style: .simple
+                style: .simple,
+                qrCodeScannedValue: .constant("")
             )
             CustomTextField(
                 title: "Registration Number",
-                style: .simple
+                style: .simple,
+                qrCodeScannedValue: .constant("")
             )
             CustomTextField(
                 title: "Vehicle type",
                 style: .menu,
+                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleTypeData()
             )
             CustomTextField(
                 title: "Make",
                 style: .menu,
+                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleMake()
             )
             CustomTextField(
                 title: "Year of Manufacture",
                 style: .menu,
+                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleYearOfManufacture()
             )
             CustomTextField(
                 title: "Fuel Type",
                 style: .menu,
+                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleFuelType()
             )
             CustomTextField(
                 title: "Capacity",
                 style: .menu,
+                qrCodeScannedValue: .constant(""),
                 dropDownItem: viewModel.makeVehicleCapacity()
             )
             CustomTextField(
                 title: "Driver",
-                style: .simple
+                style: .simple,
+                qrCodeScannedValue: .constant("")
             )
-        }
     }
     
     private var navBarLabel: some View {

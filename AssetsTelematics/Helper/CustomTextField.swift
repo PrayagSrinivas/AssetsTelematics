@@ -12,6 +12,7 @@ struct CustomTextField: View {
     @State var value = ""
     @State var title = ""
     @State var style: CustomTextFieldStyle = .simple
+    @Binding var qrCodeScannedValue: String
     
     var onScan:(() -> Void)?
     var dropDownItem: [MenuTitle] = []
@@ -88,11 +89,11 @@ struct CustomTextField: View {
     }
     
     private var commonTextField: some View {
-        TextField("", text: $value)
+        TextField("", text: style == .qrCode ? $qrCodeScannedValue : $value)
             .textFieldStyle(.plain)
             .frame(height: 45)
             .padding(.horizontal, 10)
-            .placeholder(when: value.isEmpty) {
+            .placeholder(when: style == .qrCode ? qrCodeScannedValue.isEmpty : value.isEmpty) {
                 Text(dropDownItem.isEmpty ? title : "Select \(title)")
                     .font(Font.custom("OpenSans-Semibold", size: 13))
                     .padding(.horizontal, 10)
