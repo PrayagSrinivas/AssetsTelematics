@@ -14,8 +14,6 @@ struct AddVehicleInfoView: View {
     @StateObject private var viewModel = AddVehicleInfoViewModel()
     @Binding var isSecondaryScreenPresented: Bool
     
-    @State var qrCodeScannedValue: String = ""
-
         
     // MARK: Primary View and UI Components.
     var body: some View {
@@ -34,7 +32,7 @@ struct AddVehicleInfoView: View {
             CodeScannerView(codeTypes: [.qr]) { result in
                 switch result {
                 case .success(let value):
-                    qrCodeScannedValue = value.string
+                    viewModel.qrCodeScannedValue = value.string
                     viewModel.isScannerPresented = false
                 case .failure(let failure):
                     print(failure.localizedDescription)
@@ -82,7 +80,7 @@ struct AddVehicleInfoView: View {
             CustomTextField(
                 title: "Select Imei",
                 style: .qrCode,
-                qrCodeScannedValue: $qrCodeScannedValue,
+                qrCodeScannedValue: $viewModel.qrCodeScannedValue,
                 onScan: { viewModel.isScannerPresented = true },
                 dropDownItem: [])
             CustomTextField(
